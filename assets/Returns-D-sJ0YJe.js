@@ -1,0 +1,1 @@
+import{j as r}from"./index-CK5OBvEq.js";import{O as t}from"./OrderManager-BRAgVzHR.js";import"./react-BkjRmSgm.js";import"./supabase-Be25SE7n.js";import"./TableControls-DmtG0yRN.js";import"./plus-DBLlgzDl.js";import"./trash-2-YKxNhqqU.js";import"./eye-BJBjM4WB.js";function u(){return r.jsx(t,{variant:"return"})}export{u as default};

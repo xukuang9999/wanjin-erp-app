@@ -1,0 +1,10 @@
+# Wanjin ERP — SPA (HashRouter) served from /erp/
+DirectoryIndex index.html
+
+# Hashed JS/CSS/images can be cached forever; the HTML entry must NOT be
+# long-cached, or new deploys stay invisible behind the CDN for weeks.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+  </FilesMatch>
+</IfModule>

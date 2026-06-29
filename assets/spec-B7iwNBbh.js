@@ -1,0 +1,6 @@
+import{c as i}from"./index-CK5OBvEq.js";/**
+ * @license lucide-react v0.439.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const k=i("CircleX",[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["path",{d:"m15 9-6 6",key:"1uzhvr"}],["path",{d:"m9 9 6 6",key:"z0biqf"}]]),u=["线径 d","外径 D","自由长度 L₀","总圈数 n"],m=["线径 d","外径 D","自由长度 L₀"],p=["线径 d","外径 D"];function h(n,t){return n.startsWith("线径")?t<1?"±0.02":t<3?"±0.03":"±0.05":n.startsWith("外径")?t<10?"±0.20":t<40?"±0.40":"±0.80":n.startsWith("自由")?"±1.0":n.startsWith("总圈")?"±0.5":"—"}function f(n){const t=(n??"").trim();let c="—";const e=t.match(/^(压|拉|扭|卡|碟)/);e&&(c=e[1]);const l=(t.replace(/[（(].*?[)）]/g," ").replace(/[×xX]/g,"*").match(/\d+(\.\d+)?/g)||[]).map(Number).filter(a=>!isNaN(a)),o=(l.length>=4?u:l.length===3?m:p).map((a,s)=>({label:a,value:l[s]??0,tol:h(a,l[s]??0)})).filter(a=>a.value>0);return{type:c,nums:l,dims:o}}function y(n,t){const{dims:c}=f(n),e=c.map(r=>({name:r.label,nominal:String(r.value),tol:r.tol,actual:"",ok:null}));return e.push({name:"外观(裂纹/毛刺/锈蚀)",nominal:"无",tol:"目视",actual:"",ok:null}),e.push({name:"表面处理",nominal:t||"按图",tol:"—",actual:"",ok:null}),e.push({name:"垂直度",nominal:"≤3°",tol:"—",actual:"",ok:null}),e}export{k as C,y as b,f as p};
